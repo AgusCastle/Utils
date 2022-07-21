@@ -19,6 +19,7 @@ def crearCarpetasNuevas(path):
     for folder in conjuntos:  # Creamos primero los folders
         os.makedirs(path + folder, exist_ok=True)
 
+    os.makedirs(path + 'JSONFiles', exist_ok=True)
     # Primero obtendremos la lista de las imagenes y de los anotaciones con las filtraciones
     # Empezaremos a
 
