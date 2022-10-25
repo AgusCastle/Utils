@@ -1,0 +1,16 @@
+
+# Comando para pasar la data a un txt de un csv
+
+python3.8 data_utils.py --csv2txt --file_root /home/bringascastle/Documentos/datasets-retina/IDRiD/B._Disease_Grading/2._Groundtruths/b._IDRiD_Disease_Grading_Testing_Labels.csv --col_img 0 --col_grad 1 --name IDRiD_test.txt --root_save ./ --ext jpg
+
+python3.8 data_utils.py --csv2txt --file_root /home/bringascastle/Documentos/datasets-retina/kaggle/trainLabels.csv --col_img 0 --col_grad 1 --name Kaggle_train.txt --root_save ./ --ext jpeg
+
+# Comando para pasar la data a un txt de un xls
+
+python3.8 data_utils.py --xls2txt --file_root /home/bringascastle/Documentos/datasets-retina/Messidor/Annotation_Base11.xls --col_img 0 --col_grad 2 --name Messidor_11.txt --root_save ./ --hoja Feuil1
+
+# Comando para copiar las imagenes
+
+python3.8 data_utils.py --mv --file_root IDRiD_test.txt  --origen /home/bringascastle/Documentos/datasets-retina/IDRiD/B._Disease_Grading/1._Original_Images/b._Testing_Set --destino /home/bringascastle/Documentos/drpredict-dataset/test
+
+python3.8 data_utils.py --mv --file_root Kaggle_test.txt  --origen /home/bringascastle/Documentos/datasets-retina/kaggle/train/train --destino /home/bringascastle/Documentos/drpredict-dataset/test
